@@ -1,0 +1,5 @@
+fastapi==0.104.0
+uvicorn==0.23.0
+pydantic==1.10.2  # Use a correct compatible version
+python-multipart
+

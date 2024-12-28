@@ -1,0 +1,169 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Title Section */
+.title-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 36px; /* Increased font size */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px; /* Adjusted the description font size */
+    color: #555;
+}
+
+/* Main Content Container */
+.container {
+    width: 90%; /* Increased width of container */
+    max-width: 1000px; /* Increased max-width */
+    background-color: #fff;
+    border-radius: 10px; /* Smoother corners */
+    padding: 40px; /* Increased padding for more space */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Card */
+.card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card input {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    font-size: 18px; /* Increased input font size */
+    cursor: pointer;
+    width: 100%;
+}
+
+.card input[type="file"]:hover {
+    border-color: #888;
+}
+
+/* Response Card */
+.response-card {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+.response-card p {
+    margin: 10px 0;
+    font-size: 18px; /* Increased font size */
+    color: #444;
+}
+
+.response-card p strong {
+    color: #333;
+}
+
+/* Response numbers */
+.response-card p span {
+    color: #007bff; /* Minimal color for response numbers */
+    font-weight: bold;
+}
+
+/* Show More Button */
+#toggleButton {
+    display: none;
+    text-align: left;
+    color: #007bff;
+    font-size: 16px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px 0;
+}
+
+#toggleButton:hover {
+    text-decoration: underline;
+}
+
+/* Loader Styles */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Repeated Images Table */
+#repeatedImagesTable {
+    width: 100%;
+    margin-top: 15px;
+    border: 1px solid #ddd;
+}
+
+#repeatedImagesTable th, #repeatedImagesTable td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#repeatedImagesTable th {
+    background-color: #f4f4f4;
+}
+
+/* Mobile Friendly */
+@media (max-width: 640px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .card, .response-card {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px; /* Adjust font size on smaller screens */
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .card input {
+        padding: 12px;
+    }
+}

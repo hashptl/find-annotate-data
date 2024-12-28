@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annotation Processor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 p-5">
+    <div class="container mx-auto max-w-xl">
+        <!-- Title -->
+        <h1 class="text-3xl font-bold text-center mb-5">Annotation Processor</h1>
+        <div class="card text-center">
+            <h2 class="text-xl">Upload your JSON file to find annotations</h2>
+            <input type="file" id="uploadFile" accept=".json" class="border-2 border-gray-300 rounded px-4 py-2 mt-3 cursor-pointer">
+        </div>
+
+        <!-- Response Section -->
+        <div id="resultContainer" class="response-card hidden">
+            <h3 class="text-lg font-semibold">Annotation Results</h3>
+            <div class="mt-3">
+                <p><strong>Total Annotations:</strong> <span id="totalAnnotations">-</span></p>
+                <p><strong>Total Annotated Images:</strong> <span id="totalAnnotatedImages">-</span></p>
+                <p><strong>Total Repeated Images:</strong> <span id="totalRepeatedImages">-</span></p>
+            </div>
+
+            <!-- Repeated Images -->
+            <div id="repeatedImagesContainer" class="mt-4 hidden">
+                <p><strong>Repeated Images:</strong></p>
+                <table id="repeatedImagesTable" class="table-auto w-full mt-4 border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="border px-4 py-2">Image</th>
+                            <th class="border px-4 py-2">Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Repeated images rows will be dynamically inserted here -->
+                    </tbody>
+                </table>
+                <p id="noRepeatedImagesMessage" class="text-red-500 hidden"></p>
+            </div>
+        </div>
+
+        <!-- Loader -->
+        <div id="loader" class="loader mx-auto hidden mt-4"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
